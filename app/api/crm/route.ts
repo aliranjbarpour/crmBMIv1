@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL;
+const GOOGLE_SCRIPT_URL =
+  process.env.GOOGLE_SCRIPT_URL ||
+  "https://script.google.com/macros/s/AKfycbyr3_ewp93DQ19rrNbUPlDdwaJxsC_Odg3OF7JXdws8xmpCG-pjV0Towoj4Ua3xVb3m/exec";
 
 function invalidScriptResponse(text: string, status: number) {
   const isEmptyScript =
